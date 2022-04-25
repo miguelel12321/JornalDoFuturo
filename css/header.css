@@ -1,0 +1,78 @@
+@font-face {
+    font-family: "fauna";
+    src: url(Fauna.ttf);
+}
+
+header{
+    width: 100vw;
+    text-align: center;
+    padding-top: 5px;
+    margin-top: -10px;
+    margin-left: -8px;
+    overflow-x: hidden;
+}
+
+p#voltar{
+    position: absolute;
+    width: 35pt;
+    height: 35pt;
+    font-size: 30pt;
+    float: left;
+    margin-left: 5px;
+    border: 1px solid black;
+    border-radius: 17.5pt;
+    margin-top: -100px;
+}
+
+header img{
+    scale: 100%;
+    float: left;
+}
+
+aside#menu{
+    margin-left: 80%;
+    display: block;
+    margin-top: 10px;
+    position: fixed;
+}
+
+aside#menu img{
+    width: 200px;
+}
+
+header h1{
+    font-family: "fauna";
+    font-weight: bolder;
+    font-size: 40pt;
+    text-shadow: 0px 0px 50px white;
+    margin-bottom: -10px;
+}
+
+header h2{
+        font-family: "fauna";
+        font-weight: 100;
+        font-size: 20pt;
+        text-shadow: 0px 0px 5px white;
+    }
+
+@media (max-width: 1000px) {
+    header h1{
+        font-family: "fauna";
+        font-weight: bolder;
+        font-size: 20pt;
+        text-shadow: 0px 0px 50px white;
+        margin-bottom: -10px;
+    }
+
+    header h2{
+        font-family: "fauna";
+        font-weight: 100;
+        font-size: 13pt;
+        text-shadow: 0px 0px 5px white;
+    }
+
+    header img{
+        width: 90vw;
+        margin-bottom: -80px;
+    }
+}
