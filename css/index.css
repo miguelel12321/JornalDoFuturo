@@ -15,6 +15,14 @@ body{
     font-family: Arial, Helvetica, sans-serif;
 }
 
+video#video_inicio{
+    position: absolute;
+    z-index: -1;
+    left: 0px;
+    top: 0px;
+    width: 100vw;
+}
+
 article{
     max-width: 90%;
     margin: auto;
@@ -112,6 +120,10 @@ aside#sub_desc{
 
     div#posts{
         margin-left: -20px;
+    }
+
+    video#video_inicio{
+        display: none;
     }
 }
 
