@@ -80,8 +80,8 @@ h3{
 }
 
 div#posts{
+    width: 100vw;
     background-image: url('../img/fundo_index_noticias.png');
-    margin-left: -100px;
     background-size: cover;
 }
 
@@ -124,6 +124,10 @@ aside#sub_desc{
 
     video#video_inicio{
         display: none;
+    }
+
+    header{
+        overflow: hidden;
     }
 }
 
