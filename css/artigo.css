@@ -36,6 +36,11 @@ figure{
     font-size: 10pt;
 }
 
+figure img{
+    max-width: 70vw;
+    border-radius: 5px;
+}
+
 figure.fig_float_dir{
     float: right;
 }
@@ -83,7 +88,7 @@ li {
 
 article{
     display: block;
-    max-width: 80vw;
+    max-width: 70vw;
     margin: auto;
 }
 
@@ -108,6 +113,16 @@ footer{
     margin-left: -10px;
 }
 
+p#data{
+    font-size: 8pt;
+    color: black;
+    background-color: white;
+    border-radius: 0px 15px 15px 0px;
+    width: 120px;
+    padding-left: 50px;
+    margin-left: -20px;
+}
+
 @media (max-width: 1200px) {
     h3{
         font-size: 22pt;
@@ -121,17 +136,7 @@ footer{
         font-size: 16pt;
     }
 
-    figure{
-        max-width: 70%;
-        height: auto;
-    }
-
-    figure img#principal{
-        width: 400px;
-    }
-
     figure img{
-        width: 250px;
+        max-width: 70vw;
     }
 }
-

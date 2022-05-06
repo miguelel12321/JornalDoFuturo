@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="css/menu.css">
     <title>Jornal do Futuro</title>
 </head>
-<body>
+<body onload="clicar()">
     <menu id="menu">
         <a href="index.html#Home"> <img onclick="menu_botao()" id="home_menu" src="img/home(menu).png" alt="HOME"> </a>
         <img onclick="menu_botao()" id="fechar_menu" src="img/fechar(menu).png" alt="FECHAR">
@@ -32,7 +32,7 @@
         <table id="noticias">
             <thead>
                 <tr>
-                    <th><a href="artigos/artigo_model.html"><figure><img src="img/quadrado.jpg"> <figcaption style=" margin-top: 10px;"> <h4>Título da Notícia</h4></figcaption> <figcaption><p>Lead</p></figcaption> </figure></a> </th>
+                    <th><a href="artigos/artigo1/artigo1.html"><figure><img src="artigos/artigo1/foto1_capa.png"> <figcaption style=" margin-top: 10px;"> <h4>Cientistas portugueses apresentam método inovador para produzir eletricidade.</h4></figcaption> <figcaption><p>Dois cientistas portugueses da Universidade do Porto apresentaram na última semana, numa exposição exibida em Londres, um novo método de produzir energia elétrica a partir de erupções vulcânicas, de uma forma económica.</p></figcaption> </figure></a> </th>
                     <th><a href="artigos/artigo_model.html"><figure><img src="img/quadrado.jpg"> <figcaption style=" margin-top: 10px;"> <h4>Título da Notícia</h4></figcaption> <figcaption><p>Lead</p></figcaption> </figure></a> </th>
                 </tr>
                 <tr>
@@ -102,7 +102,7 @@
     <article id="explicacao">
         <h3 style="margin-top: 50px;">O que é o "Jornal do Futuro"</h3>
         <p>O "Jornal do Futuro" é um trabalho realizado por alunos do 8º ano da <a href="http://www.espenafiel.org" target="_blank" rel="noopener noreferrer">Escola Secundária de Penafiel</a> no âmbito da DAC (Domínio da Autonomia Corricular).</p>
-        <p>A proposta para os alunos era exatamente escrever textos jornalísticos sobre como será o planeta Terra em 2050. Esta págino surge com o intuito de dar a conhecer o trabalho dos alunos à comunidade.</p>
+        <p>A proposta para os alunos era exatamente escrever textos jornalísticos com o tema "Jornal do Futuro - Como será a Terra em 2200?". Esta págino surge com o intuito de dar a conhecer o trabalho dos alunos à comunidade.</p>
     </article>
     <article id="escola">
         <h3>A Escola Secundária de <br> Penafiel</h3>
@@ -118,4 +118,10 @@
 
     <script src="menu.js"></script>
 </body>
+
+<script>
+    function clicar(){
+        document.querySelector("home_menu").click()
+    }
+</script>
 </html>

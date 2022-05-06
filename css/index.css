@@ -59,11 +59,17 @@ figure{
     font-size: 15pt;
 }
 
+figure img{
+    width: 500px;
+    border-radius: 20px;
+}
+
 figure h4{
     color: #b281ff;
     font-family: "fauna";
     text-decoration: underline;
     margin-bottom: -10px;
+    font-size: 20pt;
 }
 
 h3{
