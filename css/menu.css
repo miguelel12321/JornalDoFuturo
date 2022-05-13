@@ -7,7 +7,7 @@ menu{
     left: 150vw;
     margin-top: 0px;
     padding: 0px;
-    transition: left 1s ease 0s;
+    transition: 1s ease;
 }
 
 menu video{
@@ -66,3 +66,4 @@ img#botao_menu{
     top: 15px;
     right: 5px;
 }
+

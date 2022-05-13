@@ -101,7 +101,8 @@ footer{
 }
 
 img#fundo_outros{
-    margin-top: -1800px;
+    height: 150%;
+    margin-top: -1100px;
     position: absolute;
     z-index: -1;
     mix-blend-mode: screen;
@@ -113,6 +114,11 @@ aside#sub_desc{
     position: fixed;
 }
 
+th{
+    width: 48vw;
+    vertical-align: top;
+}
+
 @media (max-width: 1200px) {
     h3{
         font-size: 15pt;
@@ -121,7 +127,11 @@ aside#sub_desc{
     }
     
     figure img{
-        width: 100px;
+        max-width: 110px;
+    }
+
+    figure h4{
+        font-size: 14px;
     }
 
     div#posts{

@@ -27,6 +27,7 @@ a:hover{
 
 header{
     margin-bottom: 50px;
+    height: 400px;
 }
 
 figure{
@@ -83,7 +84,7 @@ h5 {
 }
 
 li {
-    list-style-type: none;
+    list-style-type: square;
 }
 
 article{
@@ -136,7 +137,15 @@ p#data{
         font-size: 16pt;
     }
 
+    article{
+        max-width: 80vw;
+    }
+
     figure img{
-        max-width: 70vw;
+        max-width: 80vw;
+    }
+
+    header{
+        height: 120px;
     }
 }
