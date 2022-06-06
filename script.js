@@ -1,6 +1,7 @@
 var menu = document.body.querySelector("#menu")
 var aberto = false
 var acessou = false
+var acesso = localStorage.getItem('acesso')
 
 function menu_botao(){
     if(aberto == false){
@@ -14,10 +15,24 @@ function menu_botao(){
     }
 }
 
-function fechar(){
-    if (acessou == false){
-    document.querySelector('.popup').style.display = 'none'
-    document.body.style.overflowY = 'scroll'
-    acessar = true
+function abrir(){
+    if (acessou == false && acesso != 'true'){
+        document.querySelector('.popup').style.opacity = '1'
+    } else{
+        document.body.style.overflowY = 'scroll'
     }
+}
+
+function desaparece(){
+    document.querySelector('.popup').style.display = 'none'
+}
+
+
+function fechar(){
+    document.querySelector('.popup').style.opacity = '0'
+    document.querySelector('.popup').style.marginTop = '-300px'
+    document.body.style.overflowY = 'scroll'
+    setTimeout(desaparece, 2000)
+    acessou = true
+    localStorage.setItem('acesso', 'true')
 }

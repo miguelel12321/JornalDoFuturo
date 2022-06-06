@@ -10,21 +10,22 @@
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/menu.css">
     <title>Jornal do Futuro</title>
+    <link rel="icon" type="image/ico" href="img/logo.ico">
     <style>
         body{
             overflow-y: hidden;
         }
     </style>
 </head>
-<div  class="popup" style="height: 100vh; width: 100vw; background-color: rgba(255, 255, 255, 0.5); position: fixed; transition: 1s ease;">
+<div  class="popup" style="height: 100vh; width: 100vw; background-color: rgba(255, 255, 255, 0.5); position: fixed; transition: .7s ease-in-out; opacity: 0; display: block; z-index: 2;">
     <div style="width: 300px; height: 300px; border-radius: 50px; text-align: centre; background-color: yellow; display: block; margin: auto;">
         <p style="padding-top: 10px; text-align: center; color: black; font-size: 20pt;">Esta página tem propósitos educativos.</p>
         <p style="text-align: center; color: black; font-size: 20pt;">A informação apresentada  não corresponde a factos reais.</p>
-        <button onclick="fechar()" style="background-color: red; width: 100px; height: 50px; border-radius: 25px; border: none; display: block; margin: auto; margin-bottom: 5px; text-decoration: underline;">FECHAR</button>
+        <button onclick="fechar()" onclick="desaparece()" style="background-color: red; width: 100px; height: 50px; border-radius: 25px; border: none; display: block; margin: auto; margin-bottom: 5px; text-decoration: underline;">FECHAR</button>
     </div>
 </div>
 
-<body>
+<body  onload="abrir()" >
     <menu id="menu">
         <a href="index.html#Home"> <img onclick="menu_botao()" id="home_menu" src="img/home(menu).png" alt="HOME"> </a>
         <img onclick="menu_botao()" id="fechar_menu" src="img/fechar(menu).png" alt="FECHAR">

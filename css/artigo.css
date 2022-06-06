@@ -124,6 +124,20 @@ p#data{
     margin-left: -20px;
 }
 
+p.tempo{
+    position: fixed;
+    font-size: 8pt;
+    color: black;
+    background-color: white;
+    border-radius: 15px 0px 0px 15px;
+    width: 120px;
+    padding-left: 10px;
+    padding-right: 50px;
+    right: -20px;
+    margin-top: -3px;
+    transition: .2s;
+}
+
 @media (max-width: 1200px) {
     h3{
         font-size: 22pt;
@@ -147,5 +161,9 @@ p#data{
 
     header{
         height: 120px;
+    }
+
+    p.tempo{
+        display: none;
     }
 }

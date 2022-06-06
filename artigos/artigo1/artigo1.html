@@ -26,6 +26,7 @@
     <header style="overflow: hidden;" id="Home">
         <a href="../../index.html"><img src="../../img/logo_jornal_pc.png" alt="Jornal do Futuro"></a>
     </header>
+    <p onclick="desaparecer()" class="tempo">Tempo de leitura:<br>00:00</p> 
     <p id="data">Data da publicação: <br> 06-05-2022</p>
     <article class="noticia">
         <h3 style="margin-top: 15px;">Cientistas portugueses apresentam método inovador para produzir eletricidade.</h3>
@@ -85,6 +86,45 @@
         <p style="text-align: right; font-size: 12pt; padding-top: calc(100vw * 0.05);">A página da escola:&emsp; <br> <a href="http://www.espenafiel.org" target="_blank" rel="noopener noreferrer">www.espenafiel.org</a>&emsp;</p>
         <p style="text-align: center; margin-bottom: 2px; font-size: 12pt;">"Jornal do Futuro" by ESPenafiel</p>
     </footer>
+
+    <script>
+        var min = 0
+        var s = 0
+        var h = 0
+
+        function tLeitura(){
+            s++
+            if (s == 60){
+                s = 0
+                min = min + 1
+            }
+            if (min == 60){
+                min = 0
+                h = h + 1
+            }
+            if (h = 24 && h != 0){
+                document.querySelector(".tempo").innerHTML = "Tempo de leitura:<br>+1 Dia"
+            } else {
+                if(h >= 1){
+                    document.querySelector(".tempo").innerHTML = "Tempo de leitura:<br>" + h.toString() + ':' + min.toString() + ':' + s.toString()
+                } else {
+                    document.querySelector(".tempo").innerHTML = "Tempo de leitura:<br>" + min.toString() + ':' + s.toString()
+                } 
+            }              
+        }
+
+        setInterval(tLeitura, 1000)
+        var o = true
+        function desaparecer(){
+            if (o == true){
+                document.querySelector(".tempo").style.opacity = '0'
+                o = false
+            } else {
+                document.querySelector(".tempo").style.opacity = '1'
+                o = true
+            }
+        }
+    </script>
 
     <script src="../../script.js"></script>
 </body>

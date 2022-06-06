@@ -9,6 +9,7 @@ html{
 }
 
 body{
+    overflow: overlay;
     overflow-x: hidden;
     background-image: url('../img/fundo_principal.png');
     max-width: fit-content;
@@ -106,12 +107,6 @@ img#fundo_outros{
     position: absolute;
     z-index: -1;
     mix-blend-mode: screen;
-}
-
-aside#sub_desc{
-    margin-left: 85vw;
-    margin-top: 46vw;
-    position: fixed;
 }
 
 th{
