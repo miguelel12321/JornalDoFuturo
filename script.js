@@ -18,6 +18,7 @@ function menu_botao(){
 function abrir(){
     if (acessou == false && acesso != 'true'){
         document.querySelector('.popup').style.opacity = '1'
+        document.querySelector('.popup').style.display = 'block'
     } else{
         document.body.style.overflowY = 'scroll'
     }
@@ -32,7 +33,7 @@ function fechar(){
     document.querySelector('.popup').style.opacity = '0'
     document.querySelector('.popup').style.marginTop = '-300px'
     document.body.style.overflowY = 'scroll'
-    setTimeout(desaparece, 2000)
+    setTimeout(desaparece, 1000)
     acessou = true
     localStorage.setItem('acesso', 'true')
 }

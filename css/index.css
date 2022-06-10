@@ -32,6 +32,7 @@ article{
 p{
     font-size: 14pt;
     color: white;
+    text-align: justify;
 }
 
 a{
@@ -66,17 +67,18 @@ figure img{
 }
 
 figure h4{
-    color: #b281ff;
+    color: #003bff;
     font-family: "fauna";
     text-decoration: underline;
     margin-bottom: -10px;
     font-size: 20pt;
+    text-shadow: rgba(255, 255, 255, 0.233) 0px 3px 30px;
 }
 
 h3{
     font-family: "fauna";
     font-size: 38pt;
-    color: #671ae0;
+    color: #003bff;
     text-decoration:underline;
     text-align: left;
     width: 100vw;
@@ -114,9 +116,10 @@ th{
     vertical-align: top;
 }
 
+
 @media (max-width: 1200px) {
     h3{
-        font-size: 15pt;
+        font-size: 14pt;
         text-align: left;
         background: none;
     }

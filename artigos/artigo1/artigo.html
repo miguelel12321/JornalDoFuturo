@@ -9,7 +9,8 @@
     <link rel="stylesheet" href="../../css/header.css">
     <link rel="stylesheet" href="../../css/artigo.css">
     <link rel="stylesheet" href="../../css/menu.css">
-    <title>Jornal do Futuro</title>
+    <title>Cientistas portugueses apresentam método inovador para produzir eletricidade.</title>
+    <link rel="icon" type="image/ico" href="../../img/logo.ico">
 </head>
 <body>
     <menu id="menu">
@@ -80,7 +81,7 @@
                 <li>Livro "Ciência & Vida 8" (ASA)</li>
             </ul>
         </div>
-        <img src="../../img/logo.png" alt="" style="width: 50vw; display: block; margin: auto;">
+        <img src="../../img/logo.png" alt="" style="width: 50vw; display: block; margin: auto; background-color: rgba(255, 255, 255, 0.527); border-radius: 30px;">
     </article>
     <footer style="margin-top: 150px;">
         <p style="text-align: right; font-size: 12pt; padding-top: calc(100vw * 0.05);">A página da escola:&emsp; <br> <a href="http://www.espenafiel.org" target="_blank" rel="noopener noreferrer">www.espenafiel.org</a>&emsp;</p>
@@ -117,10 +118,10 @@
         var o = true
         function desaparecer(){
             if (o == true){
-                document.querySelector(".tempo").style.opacity = '0'
+                document.querySelector(".tempo").style.right = '-170px'
                 o = false
             } else {
-                document.querySelector(".tempo").style.opacity = '1'
+                document.querySelector(".tempo").style.right = '-20px'
                 o = true
             }
         }

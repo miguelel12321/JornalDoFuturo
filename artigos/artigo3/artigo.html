@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <link rel="stylesheet" href="../../css/header.css">
+    <link rel="stylesheet" href="../../css/artigo.css">
+    <link rel="stylesheet" href="../../css/menu.css">
+    <title>Maior floresta acaba de ser abatida e os níveis do mar sobem drasticamente</title>
+    <link rel="icon" type="image/ico" href="../../img/logo.ico">
+</head>
+<body>
+    <menu id="menu">
+        <a href="../../index.html#Home"> <img onclick="menu_botao()" id="home_menu" src="../../img/home(menu).png" alt="HOME"> </a>
+        <img onclick="menu_botao()" id="fechar_menu" src="../../img/fechar(menu).png" alt="FECHAR">
+        <ul>
+            <li onclick="menu_botao()"><a href="../../index.html#noticias">Notícias</a></li>
+            <li onclick="menu_botao()"><a href="../../index.html#explicacao">Sobre o "Jornal do Futuro"</a></li>
+            <li onclick="menu_botao()"><a href="../../index.html#escola">Sobre a ESP</a></li>
+        </ul>
+        <video src="../../img/fundo_menu.mp4" autoplay loop mute no-controls></video>
+    </menu>
+    <img onclick="menu_botao()" id="botao_menu" src="../../img/menu (botao).png" alt="MENU">
+    <header style="overflow: hidden;" id="Home">
+        <a href="../../index.html"><img src="../../img/logo_jornal_pc.png" alt="Jornal do Futuro"></a>
+    </header>
+    <p onclick="desaparecer()" class="tempo">Tempo de leitura:<br>00:00</p> 
+    <p id="data">Data da publicação: <br> 08-06-2022</p>
+    <article class="noticia">
+        <h3 style="margin-top: 15px;">Maior floresta acaba de ser abatida e os níveis do mar sobem drasticamente</h3>
+        <figure ><img id="pricipal" class="fig_centro" src="imagem1.jpg" alt=""> <figcaption style="text-align: center;">Imagem ilustrativa da expluração florestal na Amazónia</figcaption></figure>
+        <h4>A floresta amazónica, no Brasil acaba de ser abatida na sua totalidade.</h4>
+        <p>Cientistas no Brasil afirmam que a Amazónia foi abatida, em 2200 devido ao rápido e excessivo crescimento da população.</p>
+        <p>Ao longo dos anos inventaram-se muitos objetos, como por exemplo, serras elétricas que cortam 3 vezes mais depressa do que uma serra de antigamente, portanto necessita 3 vezes de eletricidade que uma serra normal e liberta 303 Db. Para ter energia suficiente, foi inventada a “electric machine” pelo cientista brasileiro Dyego Eduardo.</p>
+        <p>Esta máquina pretende criar muita eletricidade com as tempestades e é altamente poluente. Mas, devido à poluição era muito raro haver tempestades, portanto Dyego Eduardo fez parceria com o inglês John White e juntos criaram a máquina “storm machine” que permitia criar tempestades fortes.</p>
+        <p>Portanto, com estas condições, os níveis do mar, devido às tempestades, subiram de 50% para uns incríveis 85%, os níveis de poluição subiuram de 55% para 79% e os níveis de oxigénio devido à desflorestação desceram para 34% Com isto a ONU proibiu uso do “Storm Machine” e a “eletric Machine” , mas o dano já foi causado.</p>
+        <figure ><img id="pricipal" class="fig_centro" style="width: auto; max-width: 80vw; max-height:90vh" src="imagem2.jpeg" alt=""> <figcaption style="text-align: left;">Storm Machine</figcaption></figure>
+    </article>
+    <a href="trabalho.pdf" target="_blank" rel="noopener noreferrer"><button style="text-decoration: underline; text-align:center; font-family: Arial, Helvetica, sans-serif; font-size: 12pt; font-weight:bolder; border: none; border-radius: 10px; background: rgba(255, 255, 255, 0.1); height: 30px; color: white; display: block; margin: auto;  margin-top: 150px;">Abra o trabalho original (PDF)</button></a> 
+    <article class="footer" style="margin-top: 50px;">
+        <div class="left">
+        <h5>Autores:</h5>
+            <ul>
+                <li>Daniel Silva, nº10, 8ºC</li>
+                <li>Beatriz Vale, nº6, 8ºC</li>
+                <li>Bárbara Martins, nº5, 8ºC</li>
+                <li>Carlos Couto, nº7, 8ºC</li>
+            </ul>
+        </div>
+        <div class="right">
+            <h5>Fontes</h5>
+            <ul>
+            </ul>
+        </div>
+        <img src="../../img/logo.png" alt="" style="width: 50vw; display: block; margin: auto; background-color: rgba(255, 255, 255, 0.527); border-radius: 30px;">
+    </article>
+    <footer style="margin-top: 150px;">
+        <p style="text-align: right; font-size: 12pt; padding-top: calc(100vw * 0.05);">A página da escola:&emsp; <br> <a href="http://www.espenafiel.org" target="_blank" rel="noopener noreferrer">www.espenafiel.org</a>&emsp;</p>
+        <p style="text-align: center; margin-bottom: 2px; font-size: 12pt;">"Jornal do Futuro" by ESPenafiel</p>
+    </footer>
+
+    <script>
+        var min = 0
+        var s = 0
+        var h = 0
+
+        function tLeitura(){
+            s++
+            if (s == 60){
+                s = 0
+                min = min + 1
+            }
+            if (min == 60){
+                min = 0
+                h = h + 1
+            }
+            if (h = 24 && h != 0){
+                document.querySelector(".tempo").innerHTML = "Tempo de leitura:<br>+1 Dia"
+            } else {
+                if(h >= 1){
+                    document.querySelector(".tempo").innerHTML = "Tempo de leitura:<br>" + h.toString() + ':' + min.toString() + ':' + s.toString()
+                } else {
+                    document.querySelector(".tempo").innerHTML = "Tempo de leitura:<br>" + min.toString() + ':' + s.toString()
+                } 
+            }              
+        }
+
+        setInterval(tLeitura, 1000)
+        var o = true
+        function desaparecer(){
+            if (o == true){
+                document.querySelector(".tempo").style.right = '-170px'
+                o = false
+            } else {
+                document.querySelector(".tempo").style.right = '-20px'
+                o = true
+            }
+        }
+    </script>
+
+    <script src="../../script.js"></script>
+</body>
+</html>

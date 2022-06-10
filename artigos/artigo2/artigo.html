@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <link rel="stylesheet" href="../../css/header.css">
+    <link rel="stylesheet" href="../../css/artigo.css">
+    <link rel="stylesheet" href="../../css/menu.css">
+    <title>Catástrofes: A sua evolução</title>
+    <link rel="icon" type="image/ico" href="../../img/logo.ico">
+</head>
+<body>
+    <menu id="menu">
+        <a href="../../index.html#Home"> <img onclick="menu_botao()" id="home_menu" src="../../img/home(menu).png" alt="HOME"> </a>
+        <img onclick="menu_botao()" id="fechar_menu" src="../../img/fechar(menu).png" alt="FECHAR">
+        <ul>
+            <li onclick="menu_botao()"><a href="../../index.html#noticias">Notícias</a></li>
+            <li onclick="menu_botao()"><a href="../../index.html#explicacao">Sobre o "Jornal do Futuro"</a></li>
+            <li onclick="menu_botao()"><a href="../../index.html#escola">Sobre a ESP</a></li>
+        </ul>
+        <video src="../../img/fundo_menu.mp4" autoplay loop mute no-controls></video>
+    </menu>
+    <img onclick="menu_botao()" id="botao_menu" src="../../img/menu (botao).png" alt="MENU">
+    <header style="overflow: hidden;" id="Home">
+        <a href="../../index.html"><img src="../../img/logo_jornal_pc.png" alt="Jornal do Futuro"></a>
+    </header>
+    <p onclick="desaparecer()" class="tempo">Tempo de leitura:<br>00:00</p> 
+    <p id="data">Data da publicação: <br> 08-06-2022</p>
+    <article class="noticia">
+        <h3 style="margin-top: 15px;">Catástrofes: A sua evolução.</h3>
+        <figure ><img id="pricipal" class="fig_centro" src="imagem1.jpeg" alt=""> <figcaption style="text-align: center;">Imagem ilustrativa de um animal em perigo</figcaption></figure>
+        <h4>O Passado</h4>
+        <p>No passado, a frequência das catástrofes naturais e antrópicas vinha a aumentar. Por conta disso, algumas espécies que existiam no século XXI desapareceram por completo e outras foram aparecendo.</p>
+        <h4>Medidas para diminuir os impactos</h4>
+        <p>Para diminuir os impactos de poluição nos ecossistemas temos que implementar a regra dos 5 R's (reutilizar, reciclar, reduzir, recuperar e renovar) e colocar à disposição muitos e novos ecopontos para melhorar a reciclagem.</p>
+        <h4>Duas espécies conjuntas</h4>
+        <p>Os ursos polares desapareceram completamente por causa do aquecimento global. As tartarugas estão em extinção, pois a poluição dos oceanos aumentou drasticamente. No entanto, outras espécies começaram a aparecer e substituíram as antigas. Os felinos, tigre e leão, uniram-se e combinaram os seus pontos forte, tornando-se num super felino resistente à poluição e às adversidades existentes no meio ambiente.</p>
+        <h4>O som</h4>
+        <p>Ao longo dos anos, com o aumento da velocidade dos carros (supersónica) e da população, a poluição sonora aumentou. Para tentar reduzir o aumento da poluição sonora criaram-se novas técnicas/métodos, que eram desconhecidas no passado.</p>
+    </article>
+    <a href="trabalho.pdf" target="_blank" rel="noopener noreferrer"><button style="text-decoration: underline; text-align:center; font-family: Arial, Helvetica, sans-serif; font-size: 12pt; font-weight:bolder; border: none; border-radius: 10px; background: rgba(255, 255, 255, 0.1); height: 30px; color: white; display: block; margin: auto;  margin-top: 150px;">Abra o trabalho original (PDF)</button></a> 
+    <article class="footer" style="margin-top: 50px;">
+        <div class="left">
+        <h5>Autores:</h5>
+            <ul>
+                <li>Leonor Pinto, nº18, 8ºC</li>
+                <li>Leonor Barros, nº19, 8ºC</li>
+                <li>Luís Lopes, nº20, 8ºC</li>
+                <li>Marian Brochado, nº23, 8ºC</li>
+                <li>Pedro Ferreira, nº27, 8ºC</li>
+            </ul>
+        </div>
+        <div class="right">
+            <h5>Fontes</h5>
+            <ul>
+                <li>Livro "Ciência & Vida 8" (ASA)</li>
+                <li><a href="https://www.natgeo.pt/" target="_blank" rel="noopener noreferrer"> National Geographic</a></li>
+            </ul>
+        </div>
+        <img src="../../img/logo.png" alt="" style="width: 50vw; display: block; margin: auto; background-color: rgba(255, 255, 255, 0.527); border-radius: 30px;">
+    </article>
+    <footer style="margin-top: 150px;">
+        <p style="text-align: right; font-size: 12pt; padding-top: calc(100vw * 0.05);">A página da escola:&emsp; <br> <a href="http://www.espenafiel.org" target="_blank" rel="noopener noreferrer">www.espenafiel.org</a>&emsp;</p>
+        <p style="text-align: center; margin-bottom: 2px; font-size: 12pt;">"Jornal do Futuro" by ESPenafiel</p>
+    </footer>
+
+    <script>
+        var min = 0
+        var s = 0
+        var h = 0
+
+        function tLeitura(){
+            s++
+            if (s == 60){
+                s = 0
+                min = min + 1
+            }
+            if (min == 60){
+                min = 0
+                h = h + 1
+            }
+            if (h = 24 && h != 0){
+                document.querySelector(".tempo").innerHTML = "Tempo de leitura:<br>+1 Dia"
+            } else {
+                if(h >= 1){
+                    document.querySelector(".tempo").innerHTML = "Tempo de leitura:<br>" + h.toString() + ':' + min.toString() + ':' + s.toString()
+                } else {
+                    document.querySelector(".tempo").innerHTML = "Tempo de leitura:<br>" + min.toString() + ':' + s.toString()
+                } 
+            }              
+        }
+
+        setInterval(tLeitura, 1000)
+        var o = true
+        function desaparecer(){
+            if (o == true){
+                document.querySelector(".tempo").style.right = '-170px'
+                o = false
+            } else {
+                document.querySelector(".tempo").style.right = '-20px'
+                o = true
+            }
+        }
+    </script>
+
+    <script src="../../script.js"></script>
+</body>
+</html>
