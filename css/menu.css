@@ -36,6 +36,18 @@ menu a:hover{
     font-size: 35pt;
 }
 
+button.limpar{
+    display: flex;
+    color: white;
+    background: transparent;
+    border: solid .4px white;
+    border-radius: 6px;
+    position: absolute;
+    bottom: 15px;
+    right: 17px;
+    transition: 1s;
+}
+
 @media (max-width: 1200px){
     menu ul{
         margin-left: -30px;

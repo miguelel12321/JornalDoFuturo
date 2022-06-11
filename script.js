@@ -28,6 +28,10 @@ function desaparece(){
     document.querySelector('.popup').style.display = 'none'
 }
 
+function desaparece_txt(){
+    document.querySelector('.limpa').style.display = 'none'
+}
+
 
 function fechar(){
     document.querySelector('.popup').style.opacity = '0'
@@ -36,4 +40,12 @@ function fechar(){
     setTimeout(desaparece, 1000)
     acessou = true
     localStorage.setItem('acesso', 'true')
+}
+
+function clean(){
+    localStorage.clear(acesso)
+    document.querySelector('.limpar').style.backgroundColor = 'green'
+    document.querySelector('.limpa').style.opacity = '0'
+    document.querySelector('.certo').style.opacity = '1'
+    setTimeout(desaparece_txt, 1000)
 }
