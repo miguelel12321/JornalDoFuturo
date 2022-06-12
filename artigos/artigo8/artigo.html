@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <link rel="stylesheet" href="../../css/header.css">
+    <link rel="stylesheet" href="../../css/artigo.css">
+    <link rel="stylesheet" href="../../css/menu.css">
+    <title>TERRA NOS TEMPOS DE HOJE</title>
+    <link rel="icon" type="image/ico" href="../../img/logo.ico">
+</head>
+<body>
+    <menu id="menu">
+        <a href="../../index.html#Home"> <img onclick="menu_botao()" id="home_menu" src="../../img/home(menu).png" alt="HOME"> </a>
+        <img onclick="menu_botao()" id="fechar_menu" src="../../img/fechar(menu).png" alt="FECHAR">
+        <ul>
+            <li onclick="menu_botao()"><a href="../../index.html#noticias">Notícias</a></li>
+            <li onclick="menu_botao()"><a href="../../index.html#explicacao">Sobre o "Jornal do Futuro"</a></li>
+            <li onclick="menu_botao()"><a href="../../index.html#escola">Sobre a ESP</a></li>
+        </ul>
+        <video src="../../img/fundo_menu.mp4" autoplay loop mute no-controls></video>
+    </menu>
+    <img onclick="menu_botao()" id="botao_menu" src="../../img/menu (botao).png" alt="MENU">
+    <header style="overflow: hidden;" id="Home">
+        <a href="../../index.html"><img src="../../img/logo_jornal_pc.png" alt="Jornal do Futuro"></a>
+    </header>
+    <p onclick="desaparecer()" class="tempo">Tempo de leitura:<br>00:00</p> 
+    <p id="data">Data da publicação: <br> 06-05-2022</p>
+    <article class="noticia">
+        <h3 style="margin-top: 15px;">TERRA NOS TEMPOS DE HOJE</h3>
+        <figure ><img id="pricipal" src="imagem1.jpg" alt=""> <figcaption style="text-align: center;"></figcaption></figure>
+        <h4>AUMENTO DA TEMPERATURA</h4>
+        <p>A temperatura do planeta aumentou 8 graus nos últimos 200 anos, devido a esse aumento, ocorreu o degelo, consequentemente o nível das águas do mar aumentou e neste momento existe, no planeta Terra, mas água do que superfície terrestre.
+        </p>
+        <p>Muitas espécies terrestres extinguiram-se e começaram a aparecer novas espécies aquátias.
+        </p>
+        <h4>MUDANÇAS</h4>
+        <p>Algumas das espécies terrestres começaram a modificar o seu próprio corpo de acordo com o ambiente e o ser humano ganhou membranas e caudas.</p>
+        <figure ><img src="imagem2.jpg" alt=""> <figcaption style="text-align: center;"></figcaption></figure>
+        <h4>ECOLOCALIZAÇÃO</h4>
+        <p>Devido ao ambiente, o ser humano adaptou uma nova forma de se comunicar, a ecolocalização.</p>
+        <p>A ecolocalização consiste numa sofisticada capacidade biológica de detetar a posição e/ou distância de objetos (obstáculos no meio ambiente) ou animais através da emissão de ondas ultrassônicas, no ar ou na água.</p>
+        <figure ><img src="imagem3.jpg" alt=""> <figcaption style="text-align: center;"></figcaption></figure>
+    </article>
+    <a href="trabalho.png" target="_blank" rel="noopener noreferrer"><button style="text-decoration: underline; text-align:center; font-family: Arial, Helvetica, sans-serif; font-size: 12pt; font-weight:bolder; border: none; border-radius: 10px; background: rgba(255, 255, 255, 0.1); height: 30px; color: white; display: block; margin: auto;  margin-top: 150px;">Abra o trabalho original (PNG)</button></a> 
+    <article class="footer" style="margin-top: 50px;">
+        <div class="left">
+        <h5>Autores:</h5>
+            <ul>
+            </ul>
+        </div>
+        <div class="right">
+            <h5>Fontes</h5>
+            <ul>
+            </ul>
+        </div>
+        <img src="../../img/logo.png" alt="" style="width: 50vw; display: block; margin: auto; background-color: rgba(255, 255, 255, 0.527); border-radius: 30px;">
+    </article>
+    <footer style="margin-top: 150px;">
+        <p style="text-align: right; font-size: 12pt; padding-top: calc(100vw * 0.05);">A página da escola:&emsp; <br> <a href="http://www.espenafiel.org" target="_blank" rel="noopener noreferrer">www.espenafiel.org</a>&emsp;</p>
+        <p style="text-align: center; margin-bottom: 2px; font-size: 12pt;">"Jornal do Futuro" by ESPenafiel</p>
+    </footer>
+
+    <script>
+        var min = 0
+        var s = 0
+        var h = 0
+
+        function tLeitura(){
+            s++
+            if (s == 60){
+                s = 0
+                min = min + 1
+            }
+            if (min == 60){
+                min = 0
+                h = h + 1
+            }
+            if (h = 24 && h != 0){
+                document.querySelector(".tempo").innerHTML = "Tempo de leitura:<br>+1 Dia"
+            } else {
+                if(h >= 1){
+                    document.querySelector(".tempo").innerHTML = "Tempo de leitura:<br>" + h.toString() + ':' + min.toString() + ':' + s.toString()
+                } else {
+                    document.querySelector(".tempo").innerHTML = "Tempo de leitura:<br>" + min.toString() + ':' + s.toString()
+                } 
+            }              
+        }
+
+        setInterval(tLeitura, 1000)
+        var o = true
+        function desaparecer(){
+            if (o == true){
+                document.querySelector(".tempo").style.right = '-170px'
+                o = false
+            } else {
+                document.querySelector(".tempo").style.right = '-20px'
+                o = true
+            }
+        }
+    </script>
+
+    <script src="../../script.js"></script>
+</body>
+</html>

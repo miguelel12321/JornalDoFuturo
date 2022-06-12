@@ -116,6 +116,15 @@ th{
     vertical-align: top;
 }
 
+div.th{
+    transition: .7s;
+}
+
+div.th:hover{
+    padding-top: 10px;
+    background-color: rgba(90, 90, 90, 0.4);
+    border-radius: 20px;
+}
 
 @media (max-width: 1200px) {
     h3{
